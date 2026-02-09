@@ -1,0 +1,14 @@
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\bin\Debug\net10.0\TrackerBackend.exe
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\bin\Debug\net10.0\TrackerBackend.deps.json
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\bin\Debug\net10.0\TrackerBackend.runtimeconfig.json
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\bin\Debug\net10.0\TrackerBackend.dll
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\bin\Debug\net10.0\TrackerBackend.pdb
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\obj\Debug\net10.0\TrackerBackend.GeneratedMSBuildEditorConfig.editorconfig
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\obj\Debug\net10.0\TrackerBackend.AssemblyInfoInputs.cache
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\obj\Debug\net10.0\TrackerBackend.AssemblyInfo.cs
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\obj\Debug\net10.0\TrackerBackend.csproj.CoreCompileInputs.cache
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\obj\Debug\net10.0\TrackerBackend.dll
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\obj\Debug\net10.0\refint\TrackerBackend.dll
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\obj\Debug\net10.0\TrackerBackend.pdb
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\obj\Debug\net10.0\TrackerBackend.genruntimeconfig.cache
+T:\Coding stuff\HTML\Projects\Stattrack\backend\TrackerBackend\obj\Debug\net10.0\ref\TrackerBackend.dll
