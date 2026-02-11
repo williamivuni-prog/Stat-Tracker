@@ -2,10 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stat Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
+    <h1>Gaming Match Tracker</h1>
+    
+    <form id="matchForm">
+        <input type="text" id="heroName" placeholder="Hero Name (e.g. Thor)" required>
+        <select id="role">
+            <option value="Tank">Tank</option>
+            <option value="DPS">DPS</option>
+            <option value="Support">Support</option>
+        </select>
+        <select id="result">
+            <option value="Win">Win</option>
+            <option value="Loss">Loss</option>
+        </select>
+        <button type="submit">Save Match</button>
+    </form>
+
+    <script src="app.js"></script>
+    
+<h2>Recent Matches</h2>
+<ul id="matchList"></ul>
     
 </body>
 </html>
