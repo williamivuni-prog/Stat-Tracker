@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrackerBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21f767c060ecceffddb55aadf045fd37367c4234")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b04dae3d2de098b0677e426bc67d29b5e268d8b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrackerBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrackerBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
