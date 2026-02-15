@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation de Restaurant</title>
+</head>
+<body>
+
+    <h1>Réserver une table</h1>
+
+    <form>
+        <p>
+            <label for="nom">Nom complet :</label><br>
+            <input type="text" id="nom" name="nom_client" required>
+        </p>
+
+        <p>
+            <label for="tel">Téléphone :</label><br>
+            <input type="tel" id="tel" name="telephone" required>
+        </p>
+
+        <p>
+            <label for="date">Date de réservation :</label><br>
+            <input type="date" id="date" name="date_res">
+        </p>
+
+        <p>
+            <label for="heure">Heure de réservation :</label><br>
+            <input type="time" id="heure" name="heure_res">
+        </p>
+
+        <p>
+            <label for="personnes">Nombre de personnes (1-20) :</label><br>
+            <input type="number" id="personnes" name="nb_personnes" min="1" max="20" value="2">
+        </p>
+
+        <p>
+            Emplacement préféré :<br>
+            <input type="radio" name="place" id="interieur" value="interieur">
+            <label for="interieur">Intérieur</label>
+            <input type="radio" name="place" id="terrasse" value="terrasse">
+            <label for="terrasse">Terrasse</label>
+        </p>
+
+        <p>
+            Zone fumeur :<br>
+            <input type="radio" name="fumeur" id="fumeur_oui" value="oui">
+            <label for="fumeur_oui">Fumeur</label>
+            <input type="radio" name="fumeur" id="fumeur_non" value="non" checked>
+            <label for="fumeur_non">Non-fumeur</label>
+        </p>
+
+        <p>
+            <label for="special">Demandes spéciales :</label><br>
+            <textarea id="special" name="demandes" rows="4" cols="50" placeholder="Allergies, anniversaire, etc."></textarea>
+        </p>
+
+        <input type="submit" value="Confirmer la réservation">
+    </form>
+
+</body>
+</html>

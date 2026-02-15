@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Informations personnelles</legend>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" requiered>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            <label for="naissance">Date de naissance :</label>
+            <input type="date" id="naissance" name="naissance">
+            p>Sexe :</p>
+            <input type="radio" name="sexe" value="homme" id="homme">
+            <label for="homme">Homme</label>
+            <input type="radio" name="sexe" value="femme" id="femme">
+            <label for="femme">Femme</label>
+            <input type="radio" name="sexe" value="autre" id="autre">
+            <label for="autre">Autre</label>
+        </fieldset>
+        <fieldset>
+            <legend>Coordonnées</legend>
+            <label for="email">Courriel :</label required>
+            <input type="email" id="email" name="email" required>
+            <label for="tel">Téléphone :</label>
+            <input type="tel" id="tel" name="tel">
+            <label for="adresse">Adresse :</label>
+            <input type="text" id="adresse" name="adresse">
+            <label for="ville">Ville :</label>
+            <input type="text" id="ville" name="ville">
+            <label for = "province">Province :</label>
+            <select id="province" name="province">
+                <option value="qc">Québec</option>
+                <option value="on">Ontario</option>
+                <option value="bc">Colombie-Britannique</option>
+                <option value="ab">Alberta</option>
+                <option value="mb">Manitoba</option>
+                <option value="sk">Saskatchewan</option>
+                <option value="ns">Nouvelle-Écosse</option>
+                <option value="nb">Nouveau-Brunswick</option>
+                <option value="nl">Terre-Neuve-et-Labrador</option>
+                <option value="pe">Île-du-Prince-Édouard</option>
+                <option value="nt">Territoires du Nord-Ouest</option>
+                <option value="yt">Yukon</option>
+                <option value="nu">Nunavut</option>
+            </select>
+             <label for="codepostal">Code postal :</label>
+            <input type="text" id="codepostal" name="codepostal">
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Compte</legend>
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" maxlength="20" minlength="3" required>
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+            <label for="confirm_password">Confirmer le mot de passe :</label>
+            <input type="password" id="confirm_password" name="confirm_password" minlength="8" required>
+
+        <button type="submit">Envoyer le formulaire</button>
+        <input type="checkbox" name="remember" id="remember">
+        <label for="remember">Rapelle-moi</label>
+
+    </form>
+
+</body>
+
+</html>

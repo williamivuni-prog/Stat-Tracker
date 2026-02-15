@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sondage de satisfaction</title>
+</head>
+<body>
+
+    <h1>Formulaire de sondage</h1>
+
+    <form>
+        <p>
+            <label for="programme">Programme d'études :</label><br>
+            <select id="programme" name="programme">
+                <option value="informatique">Informatique</option>
+                <option value="arts">Arts</option>
+                <option value="sciences">Sciences</option>
+            </select>
+        </p>
+
+        <p>
+            Année d'études :<br>
+            <input type="radio" name="annee" id="un" value="1"> <label for="un">1</label>
+            <input type="radio" name="annee" id="deux" value="2"> <label for="deux">2</label>
+            <input type="radio" name="annee" id="trois" value="3"> <label for="trois">3</label>
+        </p>
+
+        <p>
+            <label for="note">Note de satisfaction globale (1 à 10) :</label><br>
+            <input type="range" id="note" name="note" min="1" max="10">
+        </p>
+
+        <p>
+            Services utilisés :<br>
+            <input type="checkbox" id="biblio" name="service" value="bibliotheque"> <label for="biblio">Bibliothèque</label><br>
+            <input type="checkbox" id="cafe" name="service" value="cafeteria"> <label for="cafe">Cafétéria</label><br>
+            <input type="checkbox" id="gym" name="service" value="gymnase"> <label for="gym">Gymnase</label>
+        </p>
+
+        <p>
+            <label for="couleur">Couleur préférée pour le logo :</label><br>
+            <input type="color" id="couleur" name="couleur">
+        </p>
+
+        <p>
+            <label for="coms">Commentaires :</label><br>
+            <textarea id="coms" name="commentaires" rows="4" cols="40"></textarea>
+        </p>
+
+        <p>
+            <label for="date">Date de remplissage :</label><br>
+            <input type="date"

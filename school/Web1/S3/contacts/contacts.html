@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Informations personnelles</legend>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            <label for="email">Courriel :</label>
+            <input type="email" id="email" name="email" required>
+            <label for="tel">Téléphone :</label>
+            <input type="tel" id="tel" name="tel">
+        </fieldset>
+        <fieldset>
+            <legend>Sujet</legend>
+            <select name="Sujet du rdv" id="pays">
+                <option value="" selected>-- Choisir un sujet --</option>
+                <option value="info">Demande d'information</option>
+                <option value="tech">Support technique</option>
+                <option value="parner">Partenariat</option>
+                <option value="Autre">Autre</option>
+            </select>
+
+            <p>Urgence :</p>
+            <input type="radio" name="urgences" value="Basse" id="Basse">
+            <label for="Basse">Basse</label>
+            <input type="radio" name="urgences" value="Moyenne" id="Moyenne">
+            <label for="Moyenne">Moyenne</label>
+            <input type="radio" name="urgences" value="Haute" id="Haute">
+            <label for="Haute">Haute</label>
+
+            <label for="message"> Message :</label>
+            <textarea id="message" name="message" minlength="20"></textarea>
+
+            <input type="file" name="document" accept=".pdf,.doc,.docx">
+
+            <input type="checkbox" name="conditions" value="" id="conditions">
+            <label for="conditions">J'accepte les conditions</label>
+            <input type="checkbox" name="newsletter" value="" id="newsletter">
+            <label for="newsletter">S'inscrire à la newsletter</label>
+            <button type="submit">Envoyer le formulaire</button>
+            <button type="reset">Réinitialiser le formulaire</button>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
