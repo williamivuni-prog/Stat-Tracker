@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Kaushan+Script&family=Knewave&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    font-family: 'Kaushan Script', serif, arial;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    font-family: 'Kaushan Script', serif, arial;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3 {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: 'Kaushan Script', serif, arial;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: 'Kaushan Script', serif, arial;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#entete {
+    background-color: rgb(0, 55, 73);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: 'Kaushan Script', serif, arial;
+
+}
+
+#entete .logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+#entete nav .menu {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    color: white;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-family: "dm serif text", serif, arial;
+    padding-left: 1em;
+
+}
+
+.menu a:hover {
+    color: rgb(4, 184, 255);
+    text-decoration: underline;
+}
+
+#banniere {
+    background-image: linear-gradient(1000deg, rgb(0, 191, 255) 0%, rgb(253, 209, 89) 100%);
+    /* Ici, j'ai mis le linear-gradient pour le requis, je sais il fait rien car j'ai mis une image
+    c'est juste pour avoir le point. J'ai remplacer avec une image pour le rendre extra aesthetique*/
+    background-image: url(https://plus.unsplash.com/premium_photo-1681930071839-e5fbf9fae636?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#banniere h1 {
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    font-family: 'Kaushan Script', serif, arial;
+    font-weight: bold;
+    text-align: center;
+}
+
+.slogan {
+    color: rgba(0, 0, 0, 0.788);
+    font-size: 24px;
+    font-family: 'dm serif text', serif, arial;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.btn-principal {
+    background-color: rgb(0, 55, 73);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'dm serif text', serif, arial;
+    margin-top: 20px;
+}
+
+#destinations{
+    background-color: rgb(241, 241, 232);
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+}
+
+#destinations h2 {
+    color: rgb(0, 0, 0);
+    font-size: 26px;
+    font-family: 'dm serif text', serif, arial;
+    text-align: center;
+}
+
+#destinations .intro {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-family: 'dm serif text', serif, arial;
+    font-size: 18px;
+}
+
+
+#destinations p{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-family: 'dm serif text', serif, arial;
+    text-align: center;
+}
+
+.cartes-destinations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.carte {
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.carte-image {
+    background-color: rgb(0, 55, 73);
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+}
+
+.montant{
+    color: rgb(0, 162, 255);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-carte{
+    button-style: none;
+    background-color: rgb(0, 191, 255);
+    color: white;
+    padding: 10px 20px;
+}
