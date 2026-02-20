@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(52, 50, 54) ;
+}
+
+h1{
+    color: rgb(0, 243, 211);
+    font-size: 32px;
+    font-family: 'Merriweather', serif, arial;
+    text-align: center;
+   
+
+}
+
+h2{
+    color: rgb(0, 243, 211);
+    font-size: 26px;
+    font-family: 'Merriweather', serif, arial;
+    text-align: center;
+   
+
+}
+
+h3{
+    color: rgb(0, 243, 211);
+    font-size: 16px;
+    font-family: 'Merriweather', serif, arial;
+    text-align: center;
+   
+
+}
+
+p{
+    color: rgba(255, 255, 255, 0.8);
+      border: 2px double rgb(255, 255, 255);
+    font-size: 18px;
+    font-family: 'Fjalla One', serif, arial;
+    text-align: center;
+     text-decoration: underline;
+}
+
+li{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    font-family: 'Merriweather', serif, arial;
+     text-decoration: none;
+}
