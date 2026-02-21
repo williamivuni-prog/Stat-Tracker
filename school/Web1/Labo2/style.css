@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Kaushan+Script&family=Knewave&display=swap');
 
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Font styles for all 3 headers */
 
 h1 {
     color: rgb(0, 0, 0);
@@ -32,6 +34,8 @@ h3 {
     margin-top: 20px;
 }
 
+/* Font styles for all links*/
+
 a {
     color: rgb(0, 0, 0);
     font-size: 18px;
@@ -40,11 +44,15 @@ a {
     text-decoration: none;
 }
 
+/* Font styles for unordered lists */
+
 ul {
     list-style-type: none;
     padding: 0;
     margin: 20px 0;
 }
+
+/* Settings for the border ( entete )*/
 
 #entete {
     background-color: rgb(0, 55, 73);
@@ -58,11 +66,15 @@ ul {
 
 }
 
+/* Makes the logo bigger */
+
 #entete .logo {
     font-size: 25px;
     font-weight: bold;
     color: rgb(255, 255, 255);
 }
+
+/* Puts the links to the side and formats them */
 
 #entete nav .menu {
     font-size: 20px;
@@ -72,21 +84,24 @@ ul {
     margin: 0;
     padding: 0;
     gap: 20px;
-    color: white;
 }
 
+/* Colors the links and formats the fonts */
 .menu a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-family: "dm serif text", serif, arial;
     padding-left: 1em;
 
 }
 
+/* hover effect */
 .menu a:hover {
     color: rgb(4, 184, 255);
     text-decoration: underline;
 }
+
+/* Banner format */
 
 #banniere {
     background-image: linear-gradient(1000deg, rgb(0, 191, 255) 0%, rgb(253, 209, 89) 100%);
@@ -101,6 +116,7 @@ ul {
     justify-content: center;
 }
 
+/* Format for h1 header in banner */
 #banniere h1 {
     color: rgb(255, 255, 255);
     font-size: 36px;
@@ -109,6 +125,7 @@ ul {
     text-align: center;
 }
 
+/* Slogan format */
 .slogan {
     color: rgba(0, 0, 0, 0.788);
     font-size: 24px;
@@ -118,6 +135,7 @@ ul {
 
 }
 
+/* Formats the main button ( voir nos.. ) within the banniere */
 .btn-principal {
     background-color: rgb(0, 55, 73);
     color: white;
@@ -128,19 +146,24 @@ ul {
     margin-top: 20px;
 }
 
-#destinations{
-    background-color: rgb(241, 241, 232);
+/* Adds color and formats for the section with the cards */
+
+#destinations {
+    background-color: rgb(253, 255, 234);
     padding: 20px;
     gap: 20px;
     text-align: center;
 }
 
+/* H2 title format */
 #destinations h2 {
     color: rgb(0, 0, 0);
     font-size: 26px;
     font-family: 'dm serif text', serif, arial;
     text-align: center;
 }
+
+/* Formats the text undet the H2 title ( nos destination.. ), adds spacing*/
 
 #destinations .intro {
     margin-top: 10px;
@@ -149,13 +172,16 @@ ul {
     font-size: 18px;
 }
 
+/* Format for the thigns within the cards */
 
-#destinations p{
+#destinations p {
     color: rgb(0, 0, 0);
     font-size: 18px;
     font-family: 'dm serif text', serif, arial;
     text-align: center;
 }
+
+/* Seperates the cards into 4 horizontally*/
 
 .cartes-destinations {
     display: flex;
@@ -163,6 +189,8 @@ ul {
     gap: 20px;
     justify-content: center;
 }
+
+/* Makes the shape of the cards */
 
 .carte {
     width: 300px;
@@ -174,6 +202,8 @@ ul {
     flex-direction: column;
 }
 
+/* Formats the top of the card ( border ) and emoji size*/
+
 .carte-image {
     background-color: rgb(0, 55, 73);
     text-align: center;
@@ -181,15 +211,186 @@ ul {
     font-size: 30px;
 }
 
-.montant{
+/* Changes the color and font of the pice*/
+
+.montant {
     color: rgb(0, 162, 255);
     font-size: 18px;
     font-weight: bold;
 }
 
-.btn-carte{
-    button-style: none;
+/* Formats the buttom and makes it fill the card*/
+
+.btn-carte {
+
     background-color: rgb(0, 191, 255);
     color: white;
-    padding: 10px 20px;
+    padding: 1px 20px;
+    display: block;
+}
+
+/* Hover effect for button */
+
+.btn-carte:hover {
+    background-color: rgb(0, 162, 255);
+    color: white;
+    padding: 1px 20px;
+    display: block;
+}
+
+/* Hover effect for the card */
+.carte:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Puts them horizontal */
+.liste-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Makes the shape of the cards */
+.service {
+    width: 200px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Emoji size */
+.service-icone {
+    font-size: 30px;
+}
+
+/*colors for the middle card */
+.service:nth-child(2) {
+    background-color: rgb(75, 204, 247);
+}
+
+.list-temoignages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.temoignage {
+    background-color: rgb(253, 255, 234);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.citation {
+    font-style: italic;
+
+}
+
+.auteur {
+    color: rgb(0, 162, 255);
+    font-weight: bold;
+}
+
+.etoiles {
+    color: rgb(255, 191, 0);
+}
+
+.temoignage:nth-child(odd) {
+    background-color: rgb(251, 255, 216);
+}
+
+.intro {
+    font-family: 'dm serif text', serif, arial;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulaire {
+    max-width: 600px;
+    margin: auto;
+}
+
+.champ {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgb(0, 162, 255);
+    outline: none;
+}
+
+.btn-envoyer {
+    background-color: rgb(0, 191, 255);
+    color: white;
+    padding: 1px 20px;
+    display: block;
+}
+
+.btn-envoyer:hover {
+    background-color: rgb(0, 162, 255);
+    color: white;
+    padding: 1px 20px;
+    display: block;
+}
+
+#pied-de-page {
+    background-color: rgb(0, 55, 73);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'dm serif text', serif, arial;
+}
+
+.footer-contenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-section{
+    gap: 20px;
+    flex:1;
+}
+.footer-section a{
+    color: white;
+    text-decoration: none;
+    transition:0.3s;
+}
+
+.footer-section a:hover{
+    color: rgb(4, 184, 255);
+    text-decoration: underline;
+}
+
+.footer-bas{
+    font-size: 14px;
+    text-align: center;
+    color: rgb(124, 177, 255);
 }

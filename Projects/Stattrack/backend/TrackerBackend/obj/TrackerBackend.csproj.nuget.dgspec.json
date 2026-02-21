@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "T:\\Coding stuff\\HTML\\Projects\\Stattrack\\backend\\TrackerBackend\\TrackerBackend.csproj": {}
+    "T:\\Coding stuff\\School\\Projects\\Stattrack\\backend\\TrackerBackend\\TrackerBackend.csproj": {}
   },
   "projects": {
-    "T:\\Coding stuff\\HTML\\Projects\\Stattrack\\backend\\TrackerBackend\\TrackerBackend.csproj": {
+    "T:\\Coding stuff\\School\\Projects\\Stattrack\\backend\\TrackerBackend\\TrackerBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "T:\\Coding stuff\\HTML\\Projects\\Stattrack\\backend\\TrackerBackend\\TrackerBackend.csproj",
+        "projectUniqueName": "T:\\Coding stuff\\School\\Projects\\Stattrack\\backend\\TrackerBackend\\TrackerBackend.csproj",
         "projectName": "TrackerBackend",
-        "projectPath": "T:\\Coding stuff\\HTML\\Projects\\Stattrack\\backend\\TrackerBackend\\TrackerBackend.csproj",
+        "projectPath": "T:\\Coding stuff\\School\\Projects\\Stattrack\\backend\\TrackerBackend\\TrackerBackend.csproj",
         "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-        "outputPath": "T:\\Coding stuff\\HTML\\Projects\\Stattrack\\backend\\TrackerBackend\\obj\\",
+        "outputPath": "T:\\Coding stuff\\School\\Projects\\Stattrack\\backend\\TrackerBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config"
