@@ -1,3 +1,4 @@
+// Backend.cs
 using System;                     // Gives access to basic system features like Console, Random, etc.
 using System.Collections.Generic; // Lets us use collections such as List<T>
 
@@ -29,7 +30,7 @@ namespace GamblingGameBackend     // Defines a namespace (a container to organiz
     }
 
     public readonly struct Card : IEquatable<Card> // Struct = lightweight object type; readonly = cannot be modified after creation
-                                                    // IEquatable lets us compare two Card objects properly
+                                                   // IEquatable lets us compare two Card objects properly
     {
         public Rank Rank { get; } // Read-only property storing the card’s rank
         public Suit Suit { get; } // Read-only property storing the card’s suit
@@ -87,10 +88,126 @@ namespace GamblingGameBackend     // Defines a namespace (a container to organiz
         public void ResetAndShuffle()
         {
             _cards.Clear();
-            foreach( Suit s in Enum.GetValues(typeof(Suit)))
-            foreach ( Rank r in Enum.GetValues(typeof(Rank)))
-                _cards.add(new Card(r, s));
+            foreach (Suit s in Enum.GetValues(typeof(Suit)))
+                foreach (Rank r in Enum.GetValues(typeof(Rank)))
+                    _cards.Add(new Card(r, s));
+
+            ShuffleInPlace(_cards);
+            _nextIndex = 0;
         }
 
+        /// <summary> 
+        /// Draws the next card. No repeats are possible unless u reset it
+        /// </summary>
+        public Card Draw()
+        {
+            if (Remaining <= 0)
+                throw new InvalidOperationException("No cards left in the deck.");
+
+            return _cards[_nextIndex++]; // unique by design (we never reuse indices)
+        }
+
+        /// <summary>
+        /// Draws multiple cards, all unique.
+        /// </summary>
+        public List<Card> Draw(int count)
+        {
+            if (count < 0) throw new ArgumentOutOfRangeException(nameof(count));
+            if (count > Remaining) throw new InvalidOperationException("Not enough cards remaining to draw that many.");
+
+            var hand = new List<Card>(count);
+            for (int i = 0; i < count; i++) hand.Add(Draw());
+            return hand;
+        }
+
+        private void ShuffleInPlace(List<Card> cards)
+        {
+            int n = cards.Count;
+            for (int i = n - 1; i > 0; i--)
+            {
+                int j = _rng.Next(i + 1); // Random index from 0 to i
+                (cards[i], cards[j]) = (cards[j], cards[i]); // Swap cards
+            }
+        }
+    }
+
+    public enum RoundResult
+    {
+        PlayerWin,
+        HouseWin,
+        Push
+    }
+
+    /// <summary>
+    /// Player bets, draws 1 card, house draws 1 card. Higher rank wins.
+    /// </summary>
+    public sealed class HighCardGame
+    {
+        public Deck Deck { get; }
+        public decimal PlayerBalance { get; private set; }
+
+        public HighCardGame(decimal startingBalance, int? deckSeed = null)
+        {
+            if (startingBalance < 0) throw new ArgumentOutOfRangeException(nameof(startingBalance));
+            PlayerBalance = startingBalance;
+            Deck = new Deck(deckSeed);
+        }
+
+        public void AddFunds(decimal amount)
+        {
+            if (amount <= 0) throw new ArgumentOutOfRangeException(nameof(amount));
+            PlayerBalance += amount;
+        }
+
+        /// <summary>
+        /// Plays one round.
+        /// Payout: win = 1:1, push = refund, lose = lose bet.
+        /// </summary>
+        public (RoundResult Result, Card PlayerCard, Card HouseCard, decimal BalanceAfter) PlayRound(decimal bet)
+        {
+            if (bet <= 0) throw new ArgumentOutOfRangeException(nameof(bet));
+            if (bet > PlayerBalance) throw new InvalidOperationException("Insufficient balance for that bet.");
+
+            // Ensure there are enough cards to complete the round; reshuffle if desired.
+            if (Deck.Remaining < 2)
+            {
+                Deck.ResetAndShuffle();
+            }
+
+            PlayerBalance -= bet;
+
+            Card player = Deck.Draw();
+            Card house = Deck.Draw();
+
+            int cmp = Compare(player, house);
+
+            if (cmp > 0)
+            {
+                // Player wins: gets bet back + winnings (1:1)
+                PlayerBalance += bet * 2m;
+                return (RoundResult.PlayerWin, player, house, PlayerBalance);
+            }
+            else if (cmp < 0)
+            {
+                // House wins: bet already deducted
+                return (RoundResult.HouseWin, player, house, PlayerBalance);
+            }
+            else
+            {
+                // Push: refund bet
+                PlayerBalance += bet;
+                return (RoundResult.Push, player, house, PlayerBalance);
+            }
+        }
+
+        private static int Compare(Card a, Card b)
+        {
+            // Higher rank wins; if same rank, use suit as a deterministic tiebreaker.
+            // (You can remove suit tiebreaker if you want true ties by rank.)
+            int rankCmp = ((int)a.Rank).CompareTo((int)b.Rank);
+            if (rankCmp != 0) return rankCmp;
+
+            return ((int)a.Suit).CompareTo((int)b.Suit);
+        }
     }
 }
