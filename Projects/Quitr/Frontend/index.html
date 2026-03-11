@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gambling Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+<header>
+    <div class="container">
+        <h1>LuckySpin Casino</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#promotions">Promotions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to the Ultimate Gaming Experience</h2>
+            <p>Play slots, poker, roulette and more. Win big or play for fun!</p>
+            <a href="#games" class="btn">Explore Games</a>
+        </div>
+    </section>
+    <section id="games">
+        <div class="container">
+            <h2>Featured Games</h2>
+            <div class="game-list">
+                <div class="game-card">Slots</div>
+                <div class="game-card">Poker</div>
+                <div class="game-card">Roulette</div>
+                <div class="game-card">Blackjack</div>
+            </div>
+        </div>
+    </section>
+    <section id="promotions">
+        <div class="container">
+            <h2>Hot Promotions</h2>
+            <p>Get 100% bonus on your first deposit!</p>
+        </div>
+    </section>
+    <section id="betting">
+        <div class="container">
+            <h2>Place a Bet</h2>
+            <form>
+                <div class="form-group">
+                    <label for="game">Game:</label>
+                    <select id="game" name="game">
+                        <option value="slots">Slots</option>
+                        <option value="poker">Poker</option>
+                        <option value="roulette">Roulette</option>
+                        <option value="blackjack">Blackjack</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" min="1" step="1">
+                </div>
+                <button type="submit" class="btn">Bet Now</button>
+            </form>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>© 2026 LuckySpin Casino. Please gamble responsibly. Verify legality in your jurisdiction.</p>
+</footer>
 </body>
 </html>
